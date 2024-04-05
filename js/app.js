@@ -40,20 +40,26 @@ formElement.addEventListener('submit', function (event) {
         
         // stampare il prezzo del biglietto sulla viewport tramite collegamento all'elemento HTML
         
-        // trovare gli elementi HTML per le parti del prezzo
+        // Trovare l'elemento HTML per il prezzo
         const priceElement = document.getElementById('price');
-        
-        // formattare la parte intera del prezzo
+
+        // Formattare la parte intera del prezzo
         const integerPart = Math.floor(price - discount).toLocaleString('it-IT');
-        
-        // ottenere la parte decimale del prezzo
+
+        // Ottenere la parte decimale del prezzo
         const decimalPart = ((price - discount) - Math.floor(price - discount)).toFixed(2).slice(1).replace('.', ',');
+
+        // Impostare il contenuto dell'elemento HTML con il simbolo dell'euro
+        priceElement.innerHTML = '<strong>&euro;' + integerPart + '</strong><span class="text-muted">' + decimalPart + '</span>';
         
-        // impostare il contenuto dell'elemento HTML
-        priceElement.innerHTML = '<strong>' + '&euro;' + integerPart + '</strong><span class="text-muted">' + decimalPart + '</span>';
-        
-        // Reimposta il form ai valori predefiniti
-        formElement.reset();
+        // reimpostare il form o parte di esso ai valori predefiniti?
+
+        // const formDiscount = document.getElementById('discount-code')
+        // formDiscount.value = ""
+
+        //formElement.reset()
+
+        // document.getElementById("privacy-checkbox").checked = false;
     }
 })
 
