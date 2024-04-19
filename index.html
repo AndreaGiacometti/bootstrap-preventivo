@@ -39,12 +39,12 @@
                         <p class="mb-3">Compila il form per richiedere un preventivo per i nostri servizi di sviluppo</p>
                         <form id="quote-form">
                             <div class="mb-3">
-                                <label for="name" class="form-label">Nome</label>
-                                <input type="text" class="form-control" id="" placeholder="">
+                                <label for="name" class="form-label">Nome *</label>
+                                <input type="text" class="form-control" id="" placeholder="" required>
                             </div>
                             <div class="mb-3">
-                                <label for="surname" class="form-label">Cognome</label>
-                                <input type="text" class="form-control" id="" placeholder="">
+                                <label for="surname" class="form-label">Cognome *</label>
+                                <input type="text" class="form-control" id="" placeholder="" required>
                             </div>                              
                             <div class="mb-3">
                                 <label for="email" class="form-label">Email *</label>
@@ -52,8 +52,8 @@
                             </div>
                             <div class="mb-3">
                                 <label for="work-type" class="form-label">Tipo di lavoro *</label>
-                                <select id="work-type" class="form-select" aria-label="">
-                                    <option selected>Seleziona il tipo di lavoro</option>
+                                <select id="work-type" class="form-select" aria-label="" required>
+                                    <option value="">Seleziona il tipo di lavoro</option>
                                     <option value="1">Backed Development</option>
                                     <option value="2">Frontend Development</option>
                                     <option value="3">Project Analysis </option>
